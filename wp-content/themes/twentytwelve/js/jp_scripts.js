@@ -67,7 +67,7 @@ jQuery(function($){
 
     var view_more = $('blockquote.jp_article_heade_title > a')
     view_more.hide();
-    $('.category_items_content').hover(function(){
+    $('.index_content').hover(function(){
         $(view_more).show();
     }, function(){
         $(view_more).hide();
