@@ -65,11 +65,12 @@ jQuery(function($){
 
     $('.morelink_class').addClass('btn btn-small');
 
-    var view_more = $('blockquote.jp_article_heade_title > a.jp_view_more')
+/*    var view_more = $('blockquote.jp_article_heade_title > a.jp_view_more')
     view_more.hide();
     $('.index_content').hover(function(){
         $(view_more).show();
     }, function(){
         $(view_more).hide();
     });
+*/
 });
