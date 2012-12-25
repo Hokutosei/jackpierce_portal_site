@@ -46,11 +46,13 @@
             </div>
 
             <div class="span12 main_content">
-                <div class="banner_bottom">
-                    <?php //bloginfo('name')?>
-                    <?php// bloginfo('rss2_url')?>
+                <div class="this_banner_bottom">
+                    <div class="banner_bottom">
+                        <?php //bloginfo('name')?>
+                        <?php// bloginfo('rss2_url')?>
+                    </div>
                 </div>
-                <div class="navbar navbar-inverse" style="width: 95%; margin: 0 auto">
+                <div class="navbar navbar-inverse" style="width: 94.8%; margin: 0 auto">
                     <div class="navbar-inner">
                         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                             <span class="icon-bar"></span>

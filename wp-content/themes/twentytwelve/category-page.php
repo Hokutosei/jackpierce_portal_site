@@ -13,9 +13,10 @@
     <div class="row-fluid">
         <div class="jp_article_header span12">
             <blockquote class="jp_article_heade_title">
+                <?php the_title(); ?>
                 <a href="<?php the_permalink();?>" title="<?php esc_attr(sprintf(__('Permalink to %s', 'twentytwelve'),
-                    the_title_attribute('echo=0'))); ?>" rel="bookmark">
-                    <?php the_title(); ?>
+                    the_title_attribute('echo=0'))); ?>" rel="bookmark" class="btn btn-mini pull-right">
+                    もっと見る
                 </a>
             </blockquote>
         </div>
@@ -25,16 +26,15 @@
     <article id="post-<?php the_ID(); ?>" >
         <div class="span3">
             <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-            <div class="featured-post">
-                <?php _e( 'Featured post', 'twentytwelve' ); ?>
-            </div>
+                <div class="featured-post">
+                    <?php _e( 'Featured post', 'twentytwelve' ); ?>
+                </div>
             <?php endif; ?>
 
             <?php the_post_thumbnail(); ?>
         </div>
         <div class="span9">
             <div class="post_content">
-
                 <div class="jp_inner_article">
                     <?php if ( is_search() ) : // Only display Excerpts for Search ?>
                         <div class="entry-summary">
@@ -51,7 +51,6 @@
                     <?php endif; ?>
                 </div>
             </div>
-
         </div>
     </article><!-- #post -->
 </div>

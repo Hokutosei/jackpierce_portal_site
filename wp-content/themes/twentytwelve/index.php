@@ -56,18 +56,6 @@ get_header(); ?>
                     <br class="clearfloat"/>
                 </div>
             </div>
-
-            <div class="box_1">
-                <div class="gallery_wrapper">
-                    <?php
-                        $args = array(
-                          'name'    => 'jp_item_list1'
-                        );
-                        dynamic_sidebar($args);
-                    ?>
-                </div>
-            </div>
-
             <br class="clearfloat"/>
         </div>
         <div class="span3 pull-left">
