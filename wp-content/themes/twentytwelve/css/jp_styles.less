@@ -60,6 +60,7 @@
 
 .entry_header_jp {
   padding-left: 15px;
+  font-size: 12px;
 }
 
 /* SHADOW GENERATORS */
@@ -85,8 +86,8 @@ a.brand {
 }
 
 .entry_title_bg {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 30px !important;
+  font-size: 20px !important;
+  .josefin_sans(30px);
 }
 
 .jp_wrapper {
@@ -269,13 +270,15 @@ ul.main_nav_items {
     background: url("images/low_contrast_linen.png");
     height: 50px;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 20px;
   }
   blockquote.jp_article_heade_title {
     margin-left: 10px;
     font-size: 20px;
     color: #fff;
     height: 30px;
+    width: 100%;
   }
   .post_content {
     padding: 10px;
@@ -348,4 +351,12 @@ ul.jp_post_list {
     }
 
   }
+}
+
+/* CATEGORY LISTING WITH ITEMS */
+.category_items_content {
+  margin-bottom: 30px;
+  border: 1px solid @light_grey;
+  padding: 9px;
+  width: 95%;
 }
