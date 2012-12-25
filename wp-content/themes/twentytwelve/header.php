@@ -67,8 +67,8 @@
                 <div class="mid_banner">
                     <?php
                         echo do_shortcode("
-                        [easingslider]
-                        ")
+                            [easingslider]
+                        ") //banner sliding
                     ?>
                 </div>
                 <div class="row-fluid">

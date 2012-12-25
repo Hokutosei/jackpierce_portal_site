@@ -267,6 +267,35 @@ function twentytwelve_widgets_init() {
         'before_title'  => '<div class="news_title">',
         'after_title'   => '</div>'
     ));
+    register_sidebar(array(
+        'name'          =>  __('jp_item_list1', 'twentytwelve'),
+        'id'            =>  'jp_item_list1',
+        'description'   =>  'ジャックピアスのアイテムリスト１です',
+        'before_widget' =>  '',
+        'after_widget'  =>  '',
+        'before_title'  =>  '<div class="jp_item_list1_title">',
+        'after_title'   =>  '</div>'
+    ));
+    register_sidebar(array(
+        'name'          =>  __('jp_item_list2', 'twentytwelve'),
+        'id'            =>  'jp_item_list2',
+        'description'   =>  'ジャックピアスのアイテムリスト2です',
+        'before_widget' =>  '',
+        'after_widget'  =>  '',
+        'before_title'  =>  '<div class="jp_item_list2_title">',
+        'after_title'   =>  '</div>'
+    ));
+    register_sidebar(array(
+        'name'          =>  __('jp_item_list3', 'twentytwelve'),
+        'id'            =>  'jp_item_list3',
+        'description'   =>  'ジャックピアスのアイテムリスト3です',
+        'before_widget' =>  '',
+        'after_widget'  =>  '',
+        'before_title'  =>  '<div class="jp_item_list3_title">',
+        'after_title'   =>  '</div>'
+    ));
+
+
 
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );

@@ -15,6 +15,10 @@
 @light_blue:#0099cc;
 @light_blue_2:#acd1e9;
 
+/* CATEGORY ITEM STYLING */
+@cat_item_color:#F7F7F7;
+@cat_item_font_color:#86A7AC;
+
 
 /* MIXINS */
 .border_radius(@radius) {
@@ -99,7 +103,6 @@ a.brand {
 .jp_left_col {
   background: url("images/type.png") repeat-y;
   min-height:100%;
-
   ul {
     margin: @margin_top auto;
     li {
@@ -363,16 +366,10 @@ ul.jp_post_list {
 /* CATEGORY LISTING WITH ITEMS */
 .category_items_content {
   margin-bottom: 30px;
-  border: 2px solid #F7F7F7;
+  border: 2px solid @cat_item_color;
   padding: 9px;
   width: 95%;
-  color: #86A7AC;
-  .bottom;
-  &:hover {
-    border:2px solid #EDEDED;
-    color: #6C8896;
-  }
-
+  color: @cat_item_font_color;
 }
 
 .morelink_class {
