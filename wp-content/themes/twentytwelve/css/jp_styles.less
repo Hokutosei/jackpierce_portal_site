@@ -60,7 +60,7 @@
 
 .entry_header_jp {
   padding-left: 15px;
-  font-size: 12px;
+  font-size: 19px;
 }
 
 /* SHADOW GENERATORS */
@@ -276,9 +276,15 @@ ul.main_nav_items {
   blockquote.jp_article_heade_title {
     margin-left: 10px;
     font-size: 20px;
-    color: #fff;
     height: 30px;
     width: 100%;
+    a {
+      color: #fff !important;
+      &:hover {
+        color: @light_blue !important;
+      }
+
+    }
   }
   .post_content {
     padding: 10px;

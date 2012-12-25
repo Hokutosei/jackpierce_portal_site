@@ -32,7 +32,6 @@
 
             <?php the_post_thumbnail(); ?>
         </div>
-
         <div class="span5">
             <div class="post_content">
 

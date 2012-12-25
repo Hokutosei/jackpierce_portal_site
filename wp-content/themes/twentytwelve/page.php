@@ -14,19 +14,19 @@
 
 get_header(); ?>
 
-    <div class="news_wrapper">
-        <div class="span8 pull-left index_content">
-            <?php while ( have_posts() ) : the_post(); ?>
-            <?php get_template_part( 'content', 'page' ); ?>
-            <?php comments_template( '', true ); ?>
-            <?php endwhile; // end of the loop. ?>
-        </div>
+
+
+<div class="news_wrapper">
+    <div class="span8 pull-left index_content">
+        <?php while ( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'content', 'page' ); ?>
+        <?php comments_template( '', true ); ?>
+        <?php endwhile; // end of the loop. ?>
+
         <br class="clearfloat"/>
-            <div class="span3 pull-left">
-                <?php get_sidebar(); ?>
-            </div>
-        </div>
     </div>
+    <div class="span3 pull-left">
+        <?php get_sidebar(); ?>
+    </div>
+</div>
 <?php get_footer(); ?>
-
-
