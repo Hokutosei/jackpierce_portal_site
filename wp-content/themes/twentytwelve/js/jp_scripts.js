@@ -62,4 +62,6 @@ jQuery(function($){
 
     $('.jp_post_list > li > .this_title').hide();
     //$('a.jp_thumb_class').show();
+
+    $('.box_1 a').addClass('view_more');
 });
