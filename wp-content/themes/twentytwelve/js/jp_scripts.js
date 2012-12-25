@@ -36,11 +36,11 @@ jQuery(function($){
     $('span.lcp_date').addClass("span2 pull-right");
     $('.news_wrapper').find('strong');
     function removeMidBanner() {
-        var w = $(window).width(), m = $('.mid_banner');
+        var w = $(window).width(), m = $('.mid_banner'), ma = $('.main_sidebar'), i = $('.index_content');
         if(w < 1000) {
-            m.hide(), $('.main_sidebar').hide(), $('.index_content').removeClass('span8');
+            m.hide(), ma.hide(), i.removeClass('span8').addClass('span7');
         } else {
-            m.show(), $('.main_sidebar').show(), $('.index_content').addClass('span8');
+            m.show(), ma.show(), i.removeClass('span7').addClass('span8');
         }
     }
 
@@ -65,7 +65,7 @@ jQuery(function($){
 
     $('.morelink_class').addClass('btn btn-small');
 
-    var view_more = $('blockquote.jp_article_heade_title > a')
+    var view_more = $('blockquote.jp_article_heade_title > a.jp_view_more')
     view_more.hide();
     $('.index_content').hover(function(){
         $(view_more).show();

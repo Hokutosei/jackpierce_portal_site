@@ -15,7 +15,7 @@
             <blockquote class="jp_article_heade_title">
                 <?php the_title(); ?>
                 <a href="<?php the_permalink();?>" title="<?php esc_attr(sprintf(__('Permalink to %s', 'twentytwelve'),
-                    the_title_attribute('echo=0'))); ?>" rel="bookmark" class="btn btn-mini pull-right">
+                    the_title_attribute('echo=0'))); ?>" rel="bookmark" class="btn btn-mini pull-right jp_view_more">
                     もっと見る
                 </a>
             </blockquote>
