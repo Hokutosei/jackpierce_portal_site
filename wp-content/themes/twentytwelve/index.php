@@ -58,7 +58,7 @@ get_header(); ?>
             </div>
             <br class="clearfloat"/>
         </div>
-        <div class="span3 pull-left">
+        <div class="span3 pull-left main_sidebar">
                 <?php get_sidebar(); ?>
         </div>
 
