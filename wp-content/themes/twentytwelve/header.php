@@ -71,4 +71,4 @@
                         ") //banner sliding
                     ?>
                 </div>
-                <div class="row-fluid">
+                <div class="row">

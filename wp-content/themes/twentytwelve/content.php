@@ -23,16 +23,7 @@
     </div>
 
     <article id="post-<?php the_ID(); ?>" >
-        <div class="span3">
-            <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-            <div class="featured-post">
-                <?php _e( 'Featured post', 'twentytwelve' ); ?>
-            </div>
-            <?php endif; ?>
-
-            <?php the_post_thumbnail(); ?>
-        </div>
-        <div class="span5">
+        <div class="span12">
             <div class="post_content">
 
                 <div class="jp_inner_article">
