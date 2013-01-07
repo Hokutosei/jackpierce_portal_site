@@ -277,21 +277,12 @@ function twentytwelve_widgets_init() {
         'after_title'   =>  '</div>'
     ));
     register_sidebar(array(
-        'name'          =>  __('jp_item_list2', 'twentytwelve'),
-        'id'            =>  'jp_item_list2',
-        'description'   =>  'ジャックピアスのアイテムリスト2です',
+        'name'          =>  __('hall_of_fame', 'twentytwelve'),
+        'id'            =>  'hall_of_fame',
+        'description'   =>  '殿堂入り記事',
         'before_widget' =>  '',
         'after_widget'  =>  '',
-        'before_title'  =>  '<div class="jp_item_list2_title">',
-        'after_title'   =>  '</div>'
-    ));
-    register_sidebar(array(
-        'name'          =>  __('jp_item_list3', 'twentytwelve'),
-        'id'            =>  'jp_item_list3',
-        'description'   =>  'ジャックピアスのアイテムリスト3です',
-        'before_widget' =>  '',
-        'after_widget'  =>  '',
-        'before_title'  =>  '<div class="jp_item_list3_title">',
+        'before_title'  =>  '<div class="hall_of_fame">',
         'after_title'   =>  '</div>'
     ));
 

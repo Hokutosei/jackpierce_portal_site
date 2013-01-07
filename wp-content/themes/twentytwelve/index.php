@@ -24,8 +24,8 @@ get_header(); ?>
                 echo do_shortcode(
                     "[catlist name=news catlink=yes date=no date_tag=span comments=no
                     date_class=lcp_date numberposts=10 class=lcp_catlist morelink=\"もっと見る\"
-                    morelink_class=morelink_class]"
-                )
+                    morelink_class=morelink_class]
+                    ")
                 ?>
                 <br class="clearfloat"/>
 
@@ -36,8 +36,9 @@ get_header(); ?>
                     echo do_shortcode("
                     [catlist name=jp_item_1_cat catlink=yes class=jp_post_list
 
-                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\" morelink_class=morelink_class]
-                ")
+                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\"
+                    morelink_class=morelink_class]
+                    ")
                     ?>
                     <br class="clearfloat"/>
                 </div>
@@ -50,18 +51,31 @@ get_header(); ?>
                     echo do_shortcode("
                     [catlist name=jp_item_2_cat catlink=yes class=jp_post_list
 
-                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\" morelink_class=morelink_class]
-                ")
+                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\"
+                    morelink_class=morelink_class]
+                    ")
                     ?>
                     <br class="clearfloat"/>
                 </div>
             </div>
             <br class="clearfloat"/>
+
+            <div class="box_1">
+                <div class="gallery_wrapper">
+                    <div class="jp_post_list">
+                        <div class="cat_title">売れ筋ランキング</div>
+                        <?php if (function_exists('get_highest_rated')): ?>
+                            <ul>
+                                <?php get_highest_rated(); ?>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div class="span3 pull-left main_sidebar">
                 <?php get_sidebar(); ?>
         </div>
-
-
     </div>
     <?php get_footer(); ?>

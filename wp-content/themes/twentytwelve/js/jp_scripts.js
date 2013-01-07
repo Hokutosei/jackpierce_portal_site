@@ -17,12 +17,6 @@ jQuery(function($){
         $(this).css('border', border_style);
     })
 
-    $('.carousel-inner').css('height', '340px');
-    $('.carousel').carousel();
-    //$('#menu-navbar-inner').addClass('pull-right');
-
-
-//    alert($('.home').height())
     $(window).ready(function() {
         removeLeftCol();
     });
@@ -64,8 +58,7 @@ jQuery(function($){
 
     $('li.menu-item > a').addClass('inline-link-3');
 
-    //$('.jp_post_list > li > .this_title').append('<br />');
-    $('<br />').insertBefore('.this_title');
+    //$('<br />').insertBefore('.this_title');
     //$('a.jp_thumb_class').show();
 
     $('.morelink_class').addClass('btn btn-small');
@@ -78,21 +71,12 @@ jQuery(function($){
         $(view_more).hide();
     });
 */
+    // ALTERNATE CATEGORY TITLE BORDER LEFT HERE
     (function(){
        var s = $('.cat_title'), a = $('.cat_title:even');
         s.addClass('cat_title_border_left');
-        a.addClass('cat_title_border_left_alt');
-        //alert(s.length);
+        a.addClass('cat_title_border_left_alt').addClass('cat_title_border_left_alt2');
     })();
-    (function(){
-        var c = $('.cat_title').length;
-        $.each(c, function(k, a){
-            a.addClass()
-        })
-    })
 
-
-    //$this_title = substr($the_title, 0, $title_length) .'...';
-
-
+    $('.jp_random_image').addClass('jp_random_image_style');
 });
