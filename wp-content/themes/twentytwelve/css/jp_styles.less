@@ -18,6 +18,8 @@
 /* CATEGORY ITEM STYLING */
 @cat_item_color:#F7F7F7;
 @cat_item_font_color:#86A7AC;
+@cat_border_left:#6599FF;
+@cat_border_left_alt:#FF9900;
 
 
 /* MIXINS */
@@ -197,17 +199,24 @@ ul.main_nav_items {
 }
 
 .cat_title {
-  height: 30px;
+  height: 25px;
   vertical-align: middle;
-  padding-top: 5px;
+  padding-top: 6px;
   font-size: 20px;
   background: url("images/low_contrast_linen.png");
-  border-left: 5px solid #0044cc;
   padding-left: 5px;
   color: #fff;
   font-weight: 100;
   margin: 0px;
 }
+
+.cat_title_border_left {
+  border-left: 5px solid @cat_border_left;
+}
+.cat_title_border_left_alt {
+  border-left: 5px solid @cat_border_left_alt;
+}
+
 
 .clearfloat {
   clear:both;
@@ -346,10 +355,12 @@ span.comment_count {
   font-size: 12px;
 }
 
+// styling for the main boxes in the index
 .box_1 {
-  border: 1px solid @light_grey;
   margin-bottom: 30px;
+/*border: 1px solid @light_grey;
   .shadow_03(0.65);
+*/
 }
 
 ul.jp_post_list {

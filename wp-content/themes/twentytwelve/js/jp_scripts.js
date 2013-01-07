@@ -73,4 +73,20 @@ jQuery(function($){
         $(view_more).hide();
     });
 */
+    (function(){
+       var s = $('.cat_title'), a = $('.cat_title:even');
+        s.addClass('cat_title_border_left');
+        a.addClass('cat_title_border_left_alt');
+        //alert(s.length);
+    })();
+    (function(){
+        var c = $('.cat_title').length;
+        $.each(c, function(k, a){
+            a.addClass()
+        })
+    })
+
+
+
+
 });
