@@ -19,6 +19,7 @@ get_header(); ?>
 <div class="news_wrapper">
     <div class="span8 pull-left index_content">
         <?php while ( have_posts() ) : the_post(); ?>
+        <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
         <?php get_template_part( 'content', 'page' ); ?>
         <?php comments_template( '', true ); ?>
         <?php endwhile; // end of the loop. ?>

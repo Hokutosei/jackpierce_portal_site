@@ -52,7 +52,7 @@
                         <?php// bloginfo('rss2_url')?>
                     </div>
                 </div>
-                <div class="navbar navbar-inverse" style="width: 94.8%; margin: 0 auto">
+                <div class="navbar navbar-inverse main_nav_bar">
                     <div class="navbar-inner">
                         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                             <span class="icon-bar"></span>

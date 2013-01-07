@@ -100,9 +100,6 @@ class CatListDisplayer {
 		endif;
 		$lcp_display_output = '<'. $tag . $class . '>';
 		$lcp_display_output .=
-			$this->get_post_title($single, $this->params['title_tag'],
-														$this->params['title_class']);
-		$lcp_display_output .=
 			$this->get_comments($single, $this->params['comments_tag'],
 													$this->params['comments_class']) . ' ';
 
@@ -121,6 +118,9 @@ class CatListDisplayer {
 		}
 
 		$lcp_display_output .= $this->get_thumbnail($single);
+        $lcp_display_output .=
+            $this->get_post_title($single, $this->params['title_tag'],
+                $this->params['title_class']);
 
 		$lcp_display_output .= $this->get_content($single, $this->params['content_tag'], $this->params['content_class']);
 
@@ -177,9 +177,18 @@ class CatListDisplayer {
 		}
 
 		private function get_post_title($single, $tag = null, $css_class = null){
-				$info = '<a href="' . get_permalink($single->ID) .
+				$title_length = 40;
+                $the_title = $single->post_title;
+                $this_title;
+                $c = $css_class;
+//                if(strlen($the_title) > 20 && $c != 'lcp_catlist') {
+//                    $this_title = substr($the_title, 0, $title_length) .'...';
+//                } else {
+                    $this_title = $the_title;
+//                };
+                $info = '<a href="' . get_permalink($single->ID) .
 					'" title="'. $single->post_title . '" class="this_title">' .
-					$single->post_title . '</a>';
+                    $this_title . '</a>';
 				return $this->assign_style($info, $tag, $css_class);
 		}
 

@@ -229,6 +229,21 @@ class CatList{
 		}
 	}
 
+/*  COMMENTED THIS OUT FOR DEBUG CREATED BY ME
+ *     public function get_post_title($single){
+        if (
+            isset($this->params['post_title']) &&
+            $this->params['post_title'] == 'yes' &&
+            $single->post_content
+            ) {
+            $lcp_post_title = $single->post_title;
+            return $lcp_post_title;
+        } else {
+            return null;
+        }
+    }
+*/
+
 	public function get_excerpt($single){
 		if (
 				$this->params['excerpt']=='yes' &&

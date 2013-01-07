@@ -315,9 +315,7 @@ ul.main_nav_items {
 .jp_div_comments{
   background: #fefefe;
   padding: 9px;
-  border: 1px solid @light_grey;
   margin-top:20px;
-  .shadow_01;
 }
 
 .gallery_wrapper {
@@ -365,16 +363,23 @@ span.comment_count {
 
 ul.jp_post_list {
   margin-top:10px ;
+  width:100%;
   li {
-
-    display: inline;
-    margin-right: 5%;
+    float: left;
+    margin-right: 7%;
+    margin-bottom: 10px;
+    max-width:156px;
+    max-height:197px;
     img.jp_thumb_class {
       margin-top:20px ;
       border:3px solid #fff;
       &:hover {
         border:3px solid @light_blue;
       }
+    }
+    .this_title {
+      font-size: 11px;
+      text-align: center !important;
     }
 
   }
@@ -399,10 +404,20 @@ ul.jp_post_list {
 }
 
 /* NAV MENU STYLING */
+.main_nav_bar {
+  width: 95%;
+  margin: 0 auto;
+  margin-right: 21px;
+}
 ul.nav {
   li {
     a{
       font-size: 12px !important;
     }
   }
+}
+
+textarea#comment {
+  height: 50px;
+  width: 100px;
 }

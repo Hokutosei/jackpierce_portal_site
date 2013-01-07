@@ -2,7 +2,7 @@ jQuery(function($){
     $('.entry-title').addClass('entry_title_bg');
 
     $('.this_article').addClass('my_article');
-    $('.entry-header h1').addClass('entry_header_jp')
+    $('.entry-header h1').addClass('entry_header_jp');
     $('.entry-header h1 a').css('color', '#000').hover(function(){
         $(this).css('color', '#e9851b');
     }, function(){
@@ -55,12 +55,17 @@ jQuery(function($){
     }));
 */
 
-    /* NEW STYLING */
+/*
+*
+*   NEW STYLING
+*
+*/
     $('.widget_recent_entries ul li').find('a').addClass('main_sidebar_links');
 
     $('li.menu-item > a').addClass('inline-link-3');
 
-    $('.jp_post_list > li > .this_title').hide();
+    //$('.jp_post_list > li > .this_title').append('<br />');
+    $('<br />').insertBefore('.this_title');
     //$('a.jp_thumb_class').show();
 
     $('.morelink_class').addClass('btn btn-small');
@@ -87,6 +92,7 @@ jQuery(function($){
     })
 
 
+    //$this_title = substr($the_title, 0, $title_length) .'...';
 
 
 });
