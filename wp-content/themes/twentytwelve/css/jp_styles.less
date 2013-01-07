@@ -21,6 +21,7 @@
 @cat_border_left:#6599FF;
 @cat_border_left_alt:#FF9900;
 @cat_border_left_alt2:#DF7782;
+@this_title_a_color:#336699;
 
 
 /* MIXINS */
@@ -182,7 +183,7 @@ ul.main_nav_items {
           border:1px solid @grey_01;
     */
       a {
-        color: @light_blue;
+        color: @this_title_a_color;
         font-size: 13px;
         .josefin_sans(100);
 
@@ -283,6 +284,7 @@ ul.main_nav_items {
   margin-bottom: 10px;
   background:url("images/furley_bg.png");
   .shadow_01;
+  .border_radius(3px);
 
   .jp_post_title {
     font-size: 35px;
@@ -381,8 +383,9 @@ ul.jp_post_list {
         border:3px solid @light_blue;
       }
     }
-    .this_title {
-      font-size: 11px;
+    a.this_title {
+      color: @this_title_a_color;
+      font-size: 12px;
       text-align: center !important;
     }
 
