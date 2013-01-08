@@ -10,10 +10,11 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-            </div>
-        </div><?php // end of main_content?>
-    </div> <?php // end of jp wrapper?>
-</div> <?php // end of container-fluid?>
+                </div>
+            </div><?php // end of main_content?>
+        </div> <?php // end of jp wrapper?>
+    </div> <?php // end of container-fluid?>
+</div>
 
 <?php wp_footer(); // this call all the javascripts dont delete! ?>
 </body>

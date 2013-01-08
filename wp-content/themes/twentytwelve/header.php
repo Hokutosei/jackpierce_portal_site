@@ -34,47 +34,48 @@
 
 <body <?php body_class(); ?>>
     <?php include_once("analyticstracking.php") ?>
-    <div class="container">
-        <div class="row fill jp_wrapper">
+    <div class="jp_main_container">
+        <div class="container">
+            <div class="row jp_wrapper">
 
-            <div class="row">
-                <div class="span12">
-                    <div class="top_banner">
-                        <?php //bloginfo('name') ?>
-                        <?php
-                            $title = "Jeane";
+                <div class="">
+                    <div class="">
+                        <div class="top_banner">
+                            <?php //bloginfo('name') ?>
+                            <?php
+                            $title = "Company";
                             echo $title
-                        ?>
+                            ?>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="span12 main_content">
-                <div class="this_banner_bottom">
-                    <div class="banner_bottom">
-                        <?php //bloginfo('name')?>
-                        <?php// bloginfo('rss2_url')?>
+                <div class="main_content">
+                    <div class="this_banner_bottom">
+                        <div class="banner_bottom">
+                            <?php //bloginfo('name')?>
+                            <?php// bloginfo('rss2_url')?>
+                        </div>
                     </div>
-                </div>
-                <div class="navbar navbar-inverse main_nav_bar">
-                    <div class="navbar-inner">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
-                        <?php wp_nav_menu(array(
-                           'theme_location' => 'primary',
+                    <div class="navbar navbar-inverse main_nav_bar">
+                        <div class="navbar-inner">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </a>
+                            <?php wp_nav_menu(array(
+                            'theme_location' => 'primary',
                             'menu_class' => 'nav',
                             'container_class' => 'nav-collapse collapse'
-                         )); ?>
-                    </div>
-                </div> <?php // end of navbar?>
-                <div class="mid_banner">
-                    <?php
+                        )); ?>
+                        </div>
+                    </div> <?php // end of navbar?>
+                    <div class="mid_banner">
+                        <?php
                         echo do_shortcode("
                             [easingslider]
                         ") //banner sliding
-                    ?>
-                </div>
-                <div class="row">
+                        ?>
+                    </div>
+                    <div class="row">
