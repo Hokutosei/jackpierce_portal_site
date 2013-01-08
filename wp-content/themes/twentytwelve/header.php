@@ -40,7 +40,11 @@
             <div class="row">
                 <div class="span12">
                     <div class="top_banner">
-                        <?php bloginfo('name') ?>
+                        <?php //bloginfo('name') ?>
+                        <?php
+                            $title = "Jeane";
+                            echo $title
+                        ?>
                     </div>
                 </div>
             </div>

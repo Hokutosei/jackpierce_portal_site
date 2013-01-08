@@ -23,6 +23,11 @@
 @cat_border_left_alt2:#DF7782;
 @this_title_a_color:#336699;
 
+/* TOP BANNER STYLING */
+@top_banner_color:#fff;
+@top_banner_bg:url("images/banner_images/top_header_04.png");
+/* MAIN CONTENT POSITIONING*/
+@main_content_pos:-20px;
 
 /* MIXINS */
 .border_radius(@radius) {
@@ -146,9 +151,10 @@ ul.main_nav_items {
   padding: 0px;
   background:#fff;
   min-height:600px !important;
-  box-shadow: 0 -5px 10px -5px #333;
+  border-top:1px solid rgba(128, 128, 128, 0.3);
+  box-shadow: 0 -5px 15px -5px #333;
   position:relative;
-  top:-80px;
+  top:@main_content_pos;
 
   h1.main_content_title {
     font-family: 'Josefin Sans', sans-serif;
@@ -210,6 +216,10 @@ ul.main_nav_items {
   color: #fff;
   font-weight: 100;
   margin: 0px;
+  .bottom;
+  .dashed_border {
+
+  }
 }
 
 .cat_title_border_left {
@@ -239,16 +249,15 @@ ul.main_nav_items {
 
 /* MAIN NEW STYLES */
 .top_banner {
-  background: url("images/furley_bg.png");
-/*  background: #fff;
-*/
+  background: @top_banner_bg;
   height: 100px;
   margin-top: -2px;
   margin-bottom: 10px;
   font-family: 'Cinzel', serif;
   font-weight: 400;
   font-size: 100px;
-  color: #494F4D;
+  color: @top_banner_color;
+  text-shadow: 0px 3px 5px rgba(150, 150, 150, 3);
   text-align: center;
   padding-top: 50px;
   .shadow_02(0.30);
