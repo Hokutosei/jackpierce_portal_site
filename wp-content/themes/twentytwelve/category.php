@@ -43,7 +43,7 @@ get_header(); ?>
         <?php endif; ?>
 
     </div>
-    <div class="span3 pull-left">
+    <div class="pull-left this_main_sidebar">
         <?php get_sidebar(); ?>
     </div>
 </div>
