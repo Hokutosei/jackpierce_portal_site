@@ -19,19 +19,19 @@
 //$dbconn = pg_connect("host=ec2-54-243-190-226.compute-1.amazonaws.com port=5432 dbname=dg558f4q6lelg user=nlhywgbsmwfxqr password=HRjBwZta5j66k3XIY2ua6yt1eI sslmode=require options='--client_encoding=UTF8'") or die('Could not connect: ' . pg_last_error());
 $db = parse_url($_ENV["DATABASE_URL"]);
 //define('DB_NAME', 'jackpierce_development');
-define('DB_NAME', trim($db["path"],"/"));
+define('DB_NAME', 'dg558f4q6lelg');
 
 /** MySQL database username */
 //define('DB_USER', 'root');
-define('DB_USER', $db["user"]);
+define('DB_USER', 'nlhywgbsmwfxqr');
 
 /** MySQL database password */
 //define('DB_PASSWORD', 'root');
-define('DB_PASSWORD', $db["pass"]);
+define('DB_PASSWORD', 'HRjBwZta5j66k3XIY2ua6yt1eI');
 
 /** MySQL hostname */
 //define('DB_HOST', 'localhost');
-define('DB_HOST', $db["host"]);
+define('DB_HOST', 'ec2-54-243-190-226.compute-1.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
