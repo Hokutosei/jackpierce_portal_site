@@ -60,4 +60,6 @@ jQuery(function($){
     })();
 
     $('.jp_random_image').addClass('jp_random_image_style');
+
+    $('.box_1').addClass('box_2_bordered');
 });
