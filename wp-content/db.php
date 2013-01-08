@@ -8,7 +8,7 @@ Author: Hawk__
 Author URI: http://www.hawkix.net
 License: GPLv2 or newer.
 */
-
+/*
 if( !defined('PG4WP_ROOT'))
 {
 // You can choose the driver to load here

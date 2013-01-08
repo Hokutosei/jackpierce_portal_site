@@ -66,7 +66,7 @@ $_old_files = array(
 'wp-includes/js/list-manipulation-js.php',
 'wp-includes/js/wp-ajax-js.php',
 // 2.3
-'wp-admin/admin-db.php',
+'wp-admin/admin-1db.php',
 'wp-admin/cat.js',
 'wp-admin/categories.js',
 'wp-admin/custom-fields.js',
