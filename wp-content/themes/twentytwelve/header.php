@@ -43,7 +43,7 @@
                         <div class="top_banner">
                             <?php //bloginfo('name') ?>
                             <?php
-                            $title = "Company";
+                            $title = bloginfo('name');
                             echo $title
                             ?>
                         </div>
