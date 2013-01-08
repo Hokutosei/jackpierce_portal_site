@@ -3,7 +3,7 @@
 .idea/
 license.txt
 readme.html
+wp-content/plugins/wp-minify/cache/
 wp-content/uploads/
 wp-config.php
 wp-content/db.php
-wp-content/plugins/wp-minify/cache/
