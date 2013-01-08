@@ -62,4 +62,19 @@ jQuery(function($){
     $('.jp_random_image').addClass('jp_random_image_style');
 
     $('.box_1').addClass('box_2_bordered');
+
+   //     var c = $('.lcp_catlist>li>a.this_title');
+        //alert(c.html().length);
+     //   if(c.html().length < 5) {
+//            jQuery.trim(c).substring(0, 10).trim(this) + "...";
+       // };
+
+    (function(){
+        var l = 20, c = $('.lcp_catlist>li>a.this_title').html();
+        alert(c)
+        if(c.length > 1){
+            var string = c.substring(0, 10) + "...";
+        }
+        return string;
+    })();
 });
