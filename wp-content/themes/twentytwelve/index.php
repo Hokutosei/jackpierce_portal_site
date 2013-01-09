@@ -36,7 +36,7 @@ get_header(); ?>
                     echo do_shortcode("
                     [catlist name=jp_item_1_cat catlink=yes class=jp_post_list
 
-                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\"
+                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=6 morelink=\"もっと見る\"
                     morelink_class=morelink_class]
                     ")
                     ?>
@@ -51,7 +51,7 @@ get_header(); ?>
                     echo do_shortcode("
                     [catlist name=jp_item_2_cat catlink=yes class=jp_post_list
 
-                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=9 morelink=\"もっと見る\"
+                    thumbnail=yes thumbnail_class=jp_thumb_class content=no numberposts=6 morelink=\"もっと見る\"
                     morelink_class=morelink_class]
                     ")
                     ?>

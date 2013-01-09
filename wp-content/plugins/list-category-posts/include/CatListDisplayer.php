@@ -177,18 +177,16 @@ class CatListDisplayer {
 		}
 
 		private function get_post_title($single, $tag = null, $css_class = null){
-				$title_length = 40;
+				$title_length = 115;
                 $the_title = $single->post_title;
                 $this_title;
-                $c = $css_class;
-//                if(strlen($the_title) > 20 && $c != 'lcp_catlist') {
-//                    $this_title = substr($the_title, 0, $title_length) .'...';
-//                } else {
-                    $this_title = $the_title;
-//                };
+                if(strlen($the_title) > $title_length) {
+                    $this_title = substr($the_title, 0, $title_length) . " " . " 。。。";
+                } else { $this_title = $the_title; }
+
                 $info = '<a href="' . get_permalink($single->ID) .
 					'" title="'. $single->post_title . '" class="this_title">' .
-                    substr($this_title, 0, 80) . "..." . '</a>';
+                    $this_title . '</a>';
 				return $this->assign_style($info, $tag, $css_class);
 		}
 

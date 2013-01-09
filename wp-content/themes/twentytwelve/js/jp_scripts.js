@@ -63,18 +63,15 @@ jQuery(function($){
 
     $('.box_1').addClass('box_2_bordered');
 
-   //     var c = $('.lcp_catlist>li>a.this_title');
-        //alert(c.html().length);
-     //   if(c.html().length < 5) {
-//            jQuery.trim(c).substring(0, 10).trim(this) + "...";
-       // };
-
+    // trim long title from the index gallery page
     (function(){
-        var l = 20, c = $('.lcp_catlist>li>a.this_title').html();
-//        alert(c)
-        if(c.length > 1){
-            var string = c.substring(0, 10) + "...";
-        }
-        return string;
+        var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title');
+        c.each(function(){
+            if($(this).html().length > l) {
+                $(this).html($(this).html().substring(0, l) + "   ...");
+            }
+        })
     })();
 });
+
+

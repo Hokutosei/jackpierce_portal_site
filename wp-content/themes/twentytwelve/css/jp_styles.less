@@ -42,29 +42,24 @@
   font-family: 'Josefin Sans', sans-serif;
   font-weight: @size;
 }
-
+/* END OF MIXINS */
 
 .top {
   box-shadow: 0 -5px 5px -5px #333;
 }
-
 .right {
   box-shadow: -5px 0 5px -5px #333;
 }
-
 .bottom {
   box-shadow: 0 5px 5px -5px #333;
 }
-
 .left {
   box-shadow: 5px 0 5px -5px #333;
 }
-
 .all {
   box-shadow: 0 0 5px #333;
 }
 
-/* END OF MIXINS */
 .my_article {
   border: 1px solid @border;
   .border_radius(3px);
@@ -100,7 +95,7 @@
 .shadow_04(@opacity, @distance) {
   -webkit-box-shadow: 0px 2px 5px rgba(178, 209, 229, @opacity);
   -moz-box-shadow:    0px 2px 5px rgba(178, 209, 229, @opacity);
-  box-shadow:         0px 1px @distance rgba(50, 50, 50, @opacity);
+  box-shadow:         0px 4px @distance rgba(50, 50, 50, @opacity);
 }
 
 a.brand {
@@ -408,7 +403,7 @@ span.comment_count {
 .box_2_bordered {
   border: 1px solid #d3d3d3;
   .border_radius(4px);
-  .shadow_04(0.2, 15px);
+  .shadow_04(0.2, 19px);
 }
 
 ul.jp_post_list {
