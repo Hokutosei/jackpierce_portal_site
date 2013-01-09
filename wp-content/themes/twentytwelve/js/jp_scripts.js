@@ -65,13 +65,34 @@ jQuery(function($){
 
     // trim long title from the index gallery page
     (function(){
-        var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title');
+        var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title'), ms = $('.main_sidebar_links');
+        var ta = [c, ms]
         c.each(function(){
             if($(this).html().length > l) {
                 $(this).html($(this).html().substring(0, l) + "   ...");
             }
         })
+        ms.each(function(){
+            if($(this).html().length > l) {
+                $(this).html($(this).html().substring(0, 20) + "   ...");
+            }
+        })
+
     })();
+
+    $(function(){
+        var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
+        $(window).scroll(function(){
+            var windowTop = $(window).scrollTop();
+            var ts = {position: 'fixed', width: '100%', top: 0,  left:0, 'border-radius': '0px', zIndex:300},
+                ds = {position:'static', width: '95%'};
+            if (stickyTop < windowTop) {
+                this_div.css(ts);
+            }else {
+                this_div.css(ds);
+            }
+        })
+    })
 });
 
 

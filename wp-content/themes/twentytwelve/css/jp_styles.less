@@ -32,6 +32,9 @@
 /* CONTAINER BACKGROUND */
 @container_bg:url("images/banner_images/container_bg.png") no-repeat;
 
+/* DASHED BORDER COLOR INDEX NEWS LIST */
+@news_border_color:#e7e7e7;
+
 /* MIXINS */
 .border_radius(@radius) {
   -webkit-border-radius: @radius;
@@ -202,7 +205,7 @@ ul.main_nav_items {
       padding-left: 15px;
       vertical-align: middle;
       padding-bottom: 7px;
-      border-bottom:1px dashed #d3d3d3;
+      border-bottom:1px dashed @news_border_color;
       &:last-child {border-bottom: none}
       &:hover {
         background: #f3f3f3 url("arrows/right_chevron_b.png") no-repeat 99% 50%;
@@ -301,13 +304,41 @@ ul.main_nav_items {
 
 
 .this_main_sidebar {
-  margin-left: 35px;
+  margin-left: 18px;
+  margin-right: 10px;
   float: left;
-  width: 25%;
+  max-width: 255px;
+  .main_sidebar {
+    padding: 3px;
+    background: url("images/low_contrast_linen.png");
+    border: 1px solid #d3d3d3;
+    margin-bottom:10px;
+    .border_radius(5px);
+    .shadow_04(0.1, 19px);
+    .dashed_bd_sidebar {
+      padding: 10px;
+      border: 1px dashed #d3d3d3;
+      .border_radius(5px);
+    }
+  }
 }
 
 .main_sidebar_links {
     font-size: 10px !important;
+}
+
+.first {
+  aside.widget_recent_entries {
+    color: #ff7f50;
+    ul {
+      list-style-type: disc;
+      li {
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
 /* POST BODY STYLING */
@@ -489,7 +520,6 @@ ul.hall_of_fame {
 }
 
 .jp_random_image_style {
-  border: 1px solid @light_grey;
   .border_radius(3px);
   .shadow_02(0.20);
   img {
