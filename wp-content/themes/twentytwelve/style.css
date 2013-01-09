@@ -989,12 +989,12 @@ footer.entry-meta {
 .archive-header,
 .page-header {
     width: 90%;
-	margin-bottom: 48px;
+/*	margin-bottom: 48px;
 	margin-bottom: 3.428571429rem;
 	padding-bottom: 22px;
 	padding-bottom: 1.571428571rem;
 	border-bottom: 1px solid #ededed;
-}
+*/}
 .archive-meta {
 	color: #757575;
 	font-size: 12px;

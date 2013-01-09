@@ -10,19 +10,14 @@
 
 
 <div class="row-fluid category_items_content">
-    <div class="row-fluid">
+    <div class="row-fluid cit_cont_head">
         <div class="jp_article_header span12">
             <blockquote class="jp_article_heade_title">
                 <?php the_title(); ?>
-                <a href="<?php the_permalink();?>" title="<?php esc_attr(sprintf(__('Permalink to %s', 'twentytwelve'),
-                    the_title_attribute('echo=0'))); ?>" rel="bookmark" class="btn btn-mini pull-right jp_view_more">
-                    もっと見る
-                </a>
             </blockquote>
         </div>
 
     </div>
-
     <article id="post-<?php the_ID(); ?>" >
         <div class="span3">
             <?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
@@ -51,6 +46,13 @@
                     <?php endif; ?>
                 </div>
             </div>
+        </div>
+        <div class="view_more">
+            <a href="<?php the_permalink();?>" title="<?php esc_attr(sprintf(__('Permalink to %s', 'twentytwelve'),
+                the_title_attribute('echo=0'))); ?>" rel="bookmark" class="btn btn-mini pull-right jp_view_more">
+                もっと見る
+            </a>
+
         </div>
     </article><!-- #post -->
 </div>

@@ -16,12 +16,13 @@
 @light_blue_2:#acd1e9;
 
 /* CATEGORY ITEM STYLING */
-@cat_item_color:#F7F7F7;
+@cat_item_color:#f1f1f1;
 @cat_item_font_color:#86A7AC;
 @cat_border_left:#6599FF;
 @cat_border_left_alt:#FF9900;
 @cat_border_left_alt2:#DF7782;
 @this_title_a_color:#336699;
+@cit_cont_bcolor:#f1f1f1;
 
 /* TOP BANNER STYLING */
 @top_banner_color:#fff;
@@ -389,19 +390,18 @@ h3.widget-title {
     min-height: 10px;
     width: 100%;
     text-align: left;
-  }
-  blockquote.jp_article_heade_title {
-    margin-left: 10px;
-    font-size: 20px;
-    width: 90% !important;
-    margin-top:20px;
-    a {
-      font-size: 13px;
-      color: #fff !important;
-      &:hover {
-        color: @light_blue !important;
+    blockquote.jp_article_heade_title {
+      margin-left: 10px;
+      font-size: 25px;
+      width: 95% !important;
+      margin-top:20px;
+      a {
+        font-size: 13px;
+        color: #fff !important;
+        &:hover {
+          color: @light_blue !important;
+        }
       }
-
     }
   }
   .post_content {
@@ -489,11 +489,22 @@ ul.jp_post_list {
 /* CATEGORY LISTING WITH ITEMS */
 .category_items_content {
   margin-bottom: 30px;
-  border: 2px solid @cat_item_color;
-  padding: 9px;
+  padding-bottom: 9px;
+  border: 1px solid @cat_item_color;
   color: @cat_item_font_color;
   font-size: 13px;
   width:95%;
+  .border_radius(5px);
+  .cit_cont_head {
+    padding: 9px;
+    width: 97%;
+    border-bottom: 2px dashed @cit_cont_bcolor;
+    min-height: 20px;
+    max-height: 40px;
+  }
+  article {
+    padding: 10px;
+  }
 }
 
 .morelink_class {
@@ -551,5 +562,10 @@ ul.hall_of_fame {
   img {
     .border_radius(3px);
   }
+}
+
+.view_more {
+  width: 100%;
+  float:right;
 }
 
