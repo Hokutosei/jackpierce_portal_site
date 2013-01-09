@@ -84,12 +84,14 @@ jQuery(function($){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
         $(window).scroll(function(){
             var windowTop = $(window).scrollTop();
-            var ts = {position: 'fixed', width: '100%', top: 0,  left:0, 'border-radius': '0px', zIndex:300},
-                ds = {position:'static', width: '95%'};
+            var ts = {width: '100%', margin: 0},
+                ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
-                this_div.css(ts);
+                //this_div.css(ts);
+                this_div.addClass('navbar-fixed-top').css(ts);
             }else {
-                this_div.css(ds);
+                //this_div.css(ds);
+                this_div.removeClass('navbar-fixed-top').css(ds);
             }
         })
     })
