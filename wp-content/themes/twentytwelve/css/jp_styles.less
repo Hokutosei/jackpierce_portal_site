@@ -344,17 +344,29 @@ ul.lcp_catlist {
 
 // SIDEBAR STYLING FOR THE LINKS AND LISTS
 .first {
-  aside.widget_recent_entries {
+  aside.widget_recent_entries, .widget {
     color: #00bff3;
     ul {
       list-style-type: disc;
       li {
         a {
           color: #fff;
+          &:hover {
+            color: #6dcff6;
+          }
         }
       }
     }
   }
+}
+h3.widget-title {
+  width: 109%;
+  padding-left: 10px;
+  position: relative;
+  left: -6.5%;
+  color:#fff;
+  size:17px !important;
+  .gradient_01;
 }
 
 /* POST BODY STYLING */
@@ -540,12 +552,3 @@ ul.hall_of_fame {
   }
 }
 
-h3.widget-title {
-  width: 109%;
-  padding-left: 10px;
-  position: relative;
-  left: -6.5%;
-  color:#fff;
-  size:17px !important;
-  .gradient_01;
-}
