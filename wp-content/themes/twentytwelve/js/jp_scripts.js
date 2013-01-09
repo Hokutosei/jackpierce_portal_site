@@ -8,7 +8,6 @@ jQuery(function($){
     }, function(){
         $(this).css('color', '#000');
     });
-
     // ADD BORDER STYLING TO IMAGES
     var border_style = '2px solid #e1e1e1'
     $('.gallery-item').find('img').css('border', border_style).hover(function(){
@@ -37,7 +36,6 @@ jQuery(function($){
             m.show(), ma.show(), i.removeClass('span7').addClass('span8');
         }
     }
-
 /*
 *
 *   NEW STYLING
@@ -46,9 +44,6 @@ jQuery(function($){
     $('.widget_recent_entries ul li').find('a').addClass('main_sidebar_links');
 
     $('li.menu-item > a').addClass('inline-link-3');
-
-    //$('<br />').insertBefore('.this_title');
-    //$('a.jp_thumb_class').show();
 
     $('.morelink_class').addClass('btn btn-small');
 
@@ -64,21 +59,16 @@ jQuery(function($){
     $('.box_1').addClass('box_2_bordered');
 
     // trim long title from the index gallery page
-    (function(){
+    $(function(){
         var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title'), ms = $('.main_sidebar_links');
-        var ta = [c, ms]
-        c.each(function(){
-            if($(this).html().length > l) {
-                $(this).html($(this).html().substring(0, l) + "   ...");
-            }
+        $.each([c, ms], function(a, b){
+            b.each(function(){
+                if($(this).html().length > l) {
+                    $(this).html($(this).html().substring(0, 20) + "   ...");
+                }
+            })
         })
-        ms.each(function(){
-            if($(this).html().length > l) {
-                $(this).html($(this).html().substring(0, 20) + "   ...");
-            }
-        })
-
-    })();
+    });
 
     $(function(){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
@@ -87,10 +77,8 @@ jQuery(function($){
             var ts = {width: '100%', margin: 0},
                 ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
-                //this_div.css(ts);
                 this_div.addClass('navbar-fixed-top').css(ts);
-            }else {
-                //this_div.css(ds);
+            } else {
                 this_div.removeClass('navbar-fixed-top').css(ds);
             }
         })
