@@ -71,7 +71,7 @@ jQuery(function($){
 
     (function(){
         var l = 20, c = $('.lcp_catlist>li>a.this_title').html();
-        alert(c)
+//        alert(c)
         if(c.length > 1){
             var string = c.substring(0, 10) + "...";
         }

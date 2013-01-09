@@ -188,7 +188,7 @@ class CatListDisplayer {
 //                };
                 $info = '<a href="' . get_permalink($single->ID) .
 					'" title="'. $single->post_title . '" class="this_title">' .
-                    $this_title . '</a>';
+                    substr($this_title, 0, 80) . "..." . '</a>';
 				return $this->assign_style($info, $tag, $css_class);
 		}
 
