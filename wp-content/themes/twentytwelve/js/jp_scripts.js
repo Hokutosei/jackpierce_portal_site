@@ -58,7 +58,8 @@ jQuery(function($){
 
     $('.box_1').addClass('box_2_bordered');
 
-    // trim long title from the index gallery page
+    // trim long title from the index gallery page, REUSABLE FUNCTION
+    // JUST ADD THE ELEMENT TO THE ARRAY
     $(function(){
         var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title'), ms = $('.main_sidebar_links');
         $.each([c, ms], function(a, b){
@@ -80,6 +81,20 @@ jQuery(function($){
                 this_div.addClass('navbar-fixed-top').css(ts);
             } else {
                 this_div.removeClass('navbar-fixed-top').css(ds);
+            }
+        })
+    })
+
+    $(function(){
+        var mc = $('.main_content');
+        mc.css('top', -40)
+        $(window).scroll(function(){
+            var x = parseInt($(document).scrollTop());
+            if(x >= 0) {
+                mc.css('top', -2 * x -40);
+            } else if(x >= 280) {
+                mc.css('top', 2* x)
+                //return false
             }
         })
     })
