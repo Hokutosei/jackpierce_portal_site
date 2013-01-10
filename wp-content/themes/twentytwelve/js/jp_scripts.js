@@ -90,10 +90,10 @@ jQuery(function($){
         mc.css('top', -40)
         $(window).scroll(function(){
             var x = parseInt($(document).scrollTop());
-            if(x >= 0) {
+            if(x <= 280 && x >= 0) {
                 mc.css('top', -2 * x -40);
             } else if(x >= 280) {
-                mc.css('top', 2* x)
+                mc.css('top', -280)
                 //return false
             }
         })
