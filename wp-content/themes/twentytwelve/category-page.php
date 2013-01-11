@@ -13,7 +13,7 @@
     <div class="row-fluid cit_cont_head">
         <div class="jp_article_header span12">
             <blockquote class="jp_article_heade_title">
-                <?php the_title(); ?>
+                <a href="<?php echo get_permalink(); ?>" title="<?php the_title()?>"><?php the_title(); ?> </a>
             </blockquote>
         </div>
 

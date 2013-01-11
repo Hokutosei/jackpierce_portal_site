@@ -508,11 +508,21 @@ ul.jp_post_list {
   color: @cat_item_font_color;
   font-size: 13px;
   width:100%;
+  a {
+    color: @cat_item_font_color;
+  }
   .border_radius(5px);
   &:hover {
     color: @cat_border_left_alt;
+/*  TO FIX THIS FOR OVERLAPPING OR STYLE OVERUSE THE HAS THE SAME
+*   CLASS AS OF THE CATEGORY PAGE AND CATEGORY CONTENT
+    border: 1px solid #d3d3d3;
+*/
     .attachment-post-thumbnail{
       border: 2px solid @light_blue;
+    }
+    a {
+      color: @cat_border_left_alt !important;
     }
   }
   .attachment-post-thumbnail{

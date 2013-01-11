@@ -12,14 +12,13 @@
  */
 get_header(); ?>
 
-<div class="news_wrapper">
+<div class="news_wrapper" xmlns="http://www.w3.org/1999/html">
     <div class="span8 pull-left index_content">
         <?php if ( have_posts() ) : ?>
         <header class="archive-header">
             <h1 class="archive-title">
                 <?php printf( __( 'Category Archives: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?>
             </h1>
-
             <?php if ( category_description() ) : // Show an optional category description ?>
             <div class="archive-meta"><?php echo category_description(); ?></div>
             <?php endif; ?>
