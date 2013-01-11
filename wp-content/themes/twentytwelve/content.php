@@ -10,8 +10,8 @@
 
 
 <div class="row-fluid category_items_content">
-<!--    <p class="cat_list_p">記事のカテゴリーリスト : </p>
--->    <div class="btn-group cat_item_list">
+    <p class="cat_list_p">記事のカテゴリーリスト : </p>
+    <div class="btn-group cat_item_list">
         <?php
         $categories = get_the_category();
         $separator = ' | ';
@@ -34,7 +34,7 @@
                     <?php the_title(); ?>
             </blockquote>
             <div class="article_info">
-                ライター　：<?php the_author();?>
+                ライター　：<?php the_author();?> | 時間: <?php the_time(); ?> | 日付: <?php the_date(); ?>
             </div>
         </div>
 
