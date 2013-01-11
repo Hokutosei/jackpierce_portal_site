@@ -49,7 +49,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="main_content">
                     <div class="this_banner_bottom">
                         <div class="banner_bottom">
@@ -79,3 +78,4 @@
                         ?>
                     </div>
                     <div class="row">
+
