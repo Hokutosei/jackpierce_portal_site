@@ -10,14 +10,32 @@
 
 
 <div class="row-fluid category_items_content">
+<!--    <p class="cat_list_p">記事のカテゴリーリスト : </p>
+-->    <div class="btn-group cat_item_list">
+        <?php
+        $categories = get_the_category();
+        $separator = ' | ';
+        $output = '';
+        if($categories){
+            foreach($categories as $category) {
+                $output .= '<button class="btn btn-small">'
+                    .'<a href="'.get_category_link($category->term_id ).'"
+                title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'
+                    .$category->cat_name.'</a>'
+                    .'</button>';
+            }
+            echo trim($output);
+        }
+        ?>
+    </div>
     <div class="row-fluid">
-        <div class="jp_article_header span12">
-            <blockquote class="jp_article_heade_title">
-                <a href="<?php the_permalink();?>" title="<?php esc_attr(sprintf(__('Permalink to %s', 'twentytwelve'),
-                the_title_attribute('echo=0'))); ?>" rel="bookmark">
+        <div class="jp_article_content_head span12">
+            <blockquote class="jp_content_title">
                     <?php the_title(); ?>
-                </a>
             </blockquote>
+            <div class="article_info">
+                ライター　：<?php the_author();?>
+            </div>
         </div>
 
     </div>

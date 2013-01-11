@@ -41,8 +41,6 @@ get_header(); ?>
                     ?>
                     <br class="clearfloat"/>
                 </div>
-                <p class="scrollamount">test</p>
-                <p class="mc_pos"></p>
             </div>
 
 
