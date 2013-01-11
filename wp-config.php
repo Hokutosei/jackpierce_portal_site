@@ -14,22 +14,30 @@
  * @package WordPress
  */
 
+
+// DB SETTINGS
+$pw = 'KqZ6Dv_0lHcwC6fyJGhKPsLnP3';
+$host = 'ec2-54-243-243-217.compute-1.amazonaws.com';
+$db_name = 'dfcud5rd2gjelo';
+$user = 'hxykzzclmvzgsy';
+$local_db = 'jackpierce_development';
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-//define('DB_NAME', 'jackpierce_development');
-define('DB_NAME', 'dfcud5rd2gjelo');
+define('DB_NAME', $db_name);
+//define('DB_NAME', 'dfcud5rd2gjelo');
 
 /** MySQL database username */
-//define('DB_USER', 'root');
-define('DB_USER', 'hxykzzclmvzgsy');
+define('DB_USER', $user);
+//define('DB_USER', 'hxykzzclmvzgsy');
 
 /** MySQL database password */
-//define('DB_PASSWORD', 'root');
-define('DB_PASSWORD', 'KqZ6Dv_0lHcwC6fyJGhKPsLnP3');
+define('DB_PASSWORD', $pw);
+//define('DB_PASSWORD', 'KqZ6Dv_0lHcwC6fyJGhKPsLnP3');
 
 /** MySQL hostname */
-//define('DB_HOST', 'localhost');
-define('DB_HOST', 'ec2-54-243-243-217.compute-1.amazonaws.com');
+define('DB_HOST', $host);
+//define('DB_HOST', 'ec2-54-243-243-217.compute-1.amazonaws.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
