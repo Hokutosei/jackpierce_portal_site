@@ -390,6 +390,7 @@ h3.widget-title {
       font-size: 25px;
       width: 90% !important;
       margin-top:20px;
+
       a {
         font-size: 13px;
         color: #fff !important;
@@ -479,13 +480,13 @@ ul.jp_post_list {
   margin-top:10px ;
   width:100%;
   li {
-    float: left;
     margin-right: 5%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     max-width:156px;
     max-height:197px;
+    display:inline-block;
     img.jp_thumb_class {
-      margin-top:20px ;
+      margin-top:30px;
       border:3px solid #fff;
       &:hover {
         border:3px solid @light_blue;
@@ -514,7 +515,7 @@ ul.jp_post_list {
   .border_radius(5px);
   &:hover {
     color: @cat_border_left_alt;
-/*  TO FIX THIS FOR OVERLAPPING OR STYLE OVERUSE THE HAS THE SAME
+/*  TO FIX THIS FOR OVERLAPPING OR STYLE OVERUSE THAT HAS THE SAME
 *   CLASS AS OF THE CATEGORY PAGE AND CATEGORY CONTENT
     border: 1px solid #d3d3d3;
 */
@@ -523,6 +524,9 @@ ul.jp_post_list {
     }
     a {
       color: @cat_border_left_alt !important;
+    }
+    blockquote {
+      border-left: 5px solid #d3d3d3 !important;
     }
   }
   .attachment-post-thumbnail{
@@ -613,4 +617,3 @@ ul.hall_of_fame {
   width: 100%;
   float:right;
 }
-

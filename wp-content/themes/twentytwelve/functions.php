@@ -150,7 +150,6 @@ function twentytwelve_scripts_styles() {
     wp_enqueue_script('less', get_template_directory_uri() . '/js/less-1.3.1.min.js', array(), '20121217', 'all');
     //enqueing bootstrap here;
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '20121217', 'all');
-//    wp_enqueue_script('debounce', get_template_directory_uri() . '/js/jquery.ba-throttle-debounce.min.js', array(), '20121220', 'all');
     wp_enqueue_script('jp_scripts', get_template_directory_uri() . '/js/jp_scripts.js', array(),
                         '20121217', 'all');
 	/*
