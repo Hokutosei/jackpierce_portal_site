@@ -14,7 +14,6 @@
     <div class="btn-group cat_item_list">
         <?php
         $categories = get_the_category();
-        $separator = ' | ';
         $output = '';
         if($categories){
             foreach($categories as $category) {
@@ -25,6 +24,7 @@
                     .'</button>';
             }
             echo trim($output);
+            //echo $output;
         }
         ?>
     </div>
@@ -37,13 +37,11 @@
                 ライター　：<?php the_author();?> | 時間: <?php the_time(); ?> | 日付: <?php the_date(); ?>
             </div>
         </div>
-
     </div>
 
     <article id="post-<?php the_ID(); ?>" >
         <div class="span12">
             <div class="post_content">
-
                 <div class="jp_inner_article">
                     <?php if ( is_search() ) : // Only display Excerpts for Search ?>
                     <div class="entry-summary">
