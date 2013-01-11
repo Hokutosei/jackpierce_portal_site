@@ -28,8 +28,6 @@ get_header(); ?>
                     ")
                 ?>
                 <br class="clearfloat"/>
-                <p class="scrollamount">test</p>
-                <p class="mc_pos">t</p>
             </div>
             <div class="box_1">
                 <div class="gallery_wrapper">
