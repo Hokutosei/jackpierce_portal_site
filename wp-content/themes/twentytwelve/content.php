@@ -8,27 +8,29 @@
  */
 ?>
 
-
-<div class="row-fluid category_items_content">
-    <p class="cat_list_p">記事のカテゴリーリスト : </p>
-    <div class="btn-group cat_item_list">
-        <?php
-        $categories = get_the_category();
-        $output = '';
-        if($categories){
-            foreach($categories as $category) {
-                $output .= '<button class="btn btn-small">'
-                    .'<a href="'.get_category_link($category->term_id ).'"
+<div class="row-fluid post_cat_list">
+    <div class="row post_cat_id">
+        <div class="btn-group">
+            <?php
+            $categories = get_the_category();
+            $output = '';
+            if($categories){
+                foreach($categories as $category) {
+                    $output .= '<button class="btn btn-small">'
+                        .'<a href="'.get_category_link($category->term_id ).'"
                 title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'
-                    .$category->cat_name.'</a>'
-                    .'</button>';
+                        .$category->cat_name.'</a>'
+                        .'</button>';
+                }
+                echo trim($output);
+                //echo $output;
             }
-            echo trim($output);
-            //echo $output;
-        }
-        ?>
+            ?>
+        </div>
+        <div class="span1 pull-right">
+        </div>
     </div>
-    <div class="row-fluid">
+    <div class="row-fluid post_header">
         <div class="jp_article_content_head span12">
             <blockquote class="jp_content_title">
                     <?php the_title(); ?>
@@ -49,7 +51,8 @@
                     </div><!-- .entry-summary -->
                     <?php else : ?>
                     <div class="entry-content">
-                        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                        <?php //the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                        <?php echo get_the_content();?>
                         <?php //wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
                     </div><!-- .entry-content -->
                     <?php endif; ?>
@@ -58,6 +61,7 @@
 
         </div>
     </article><!-- #post -->
+
 </div>
 
 

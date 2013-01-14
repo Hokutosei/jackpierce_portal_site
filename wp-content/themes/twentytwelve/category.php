@@ -11,7 +11,6 @@
  * @since Twenty Twelve 1.0
  */
 get_header(); ?>
-
 <div class="news_wrapper" xmlns="http://www.w3.org/1999/html">
     <div class="span8 pull-left index_content">
         <?php if ( have_posts() ) : ?>
@@ -61,11 +60,6 @@ get_header(); ?>
         <?php else : ?>
             <?php get_template_part( 'content', 'none' ); ?>
         <?php endif; ?>
-
-
-
-
-
     </div>
     <div class="pull-left this_main_sidebar">
         <?php get_sidebar(); ?>
