@@ -52,8 +52,8 @@
                     </div><!-- .entry-summary -->
                     <?php else : ?>
                     <div class="entry-content">
-                        <?php //the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-                        <?php echo get_the_content();?>
+                        <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+                        <?php //echo get_the_content();?>
                         <?php //wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
                     </div><!-- .entry-content -->
                     <?php endif; ?>

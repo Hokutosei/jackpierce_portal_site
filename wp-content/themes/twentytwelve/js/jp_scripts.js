@@ -8,8 +8,8 @@ jQuery(function($){
     }, function(){
         $(this).css('color', '#000');
     });
-    // ADD BORDER STYLING TO IMAGES
-    var border_style = '2px solid #e1e1e1';
+    // ADD BORDER STYLING TO IMAGES IN GALLERY FROM POSTS
+    var border_style = '2px solid #fff';
     $('.gallery-item').find('img').css('border', border_style).hover(function(){
         $(this).css('border', '2px solid #00b1ef');
     }, function(){
@@ -71,6 +71,7 @@ jQuery(function($){
 
     $(function(){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
+        //$ SIGN TO DISABLE/INABLE
         $(window).scroll(function(){
             var windowTop = $(window).scrollTop();
             var ts = {width: '100%', margin: 0},
@@ -108,6 +109,8 @@ jQuery(function($){
             i.addClass('span8').css("width", "")
         }
     });
+
+    $('li.comment').append('<br class="clearfloat" />');
 });
 
 

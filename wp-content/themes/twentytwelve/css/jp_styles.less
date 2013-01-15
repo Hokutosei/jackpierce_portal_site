@@ -454,10 +454,65 @@ h3.widget-title {
 }
 
 /* COMMENT BODY STYLING */
-.jp_div_comments{
+div.jp_div_comments{
+  @comment_fnt_size: 11px !important;
   background: #fefefe;
-  padding: 9px;
+  padding: 10px;
   margin-top:20px;
+  font-size: @comment_fnt_size;
+
+  .comments-area {
+    padding:0px;
+    ol.commentlist {
+      padding:0px;
+      margin:0px !important;
+      li.comment {
+        border:1px solid #d3d3d3;
+        margin-bottom: 10px;
+        .border_radius(4px);
+        article.comment {
+          margin: 0px;
+          font-size: @comment_fnt_size;
+        }
+        header.comment-author {
+          margin: 0px;
+          padding: 10px;
+          border-bottom: 1px solid #d3d3d3;
+          font-size: @comment_fnt_size;
+          cite.fn {
+
+          }
+           a time {
+            font-size: 10px;
+          }
+        }
+        section.comment-content {
+          padding:10px;
+          p {
+            font-size: @comment_fnt_size;
+            margin: 0px;
+          }
+          p.edit-link a {
+            font-size: @comment_fnt_size;
+            margin: 0px;
+          }
+        }
+        div.reply{
+          height: 10px;
+          width:100%;
+          margin-left:10px;
+          a {
+            font-size: @comment_fnt_size;
+          }
+        }
+        ol.children {
+          li {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -526,7 +581,6 @@ ul.jp_post_list {
       font-size: 12px;
       text-align: center !important;
     }
-
   }
 }
 
