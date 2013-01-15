@@ -86,7 +86,7 @@ jQuery(function($){
 
     $(function(){
         var mc = $('.main_content');
-        mc.css('top', -90);
+        //mc.css('top', -90);
         (window).scroll(function(){
             var x = parseInt($(document).scrollTop());
             var y = $('.main_content').position().top;
