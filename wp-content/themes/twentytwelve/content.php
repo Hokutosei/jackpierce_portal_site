@@ -28,7 +28,7 @@
             ?>
         </div>
         <div class="pull-right">
-            <i class="icon-chevron-right toggle_sidebar"></i>
+            <i class="icon-chevron-right toggle_sidebar active_tog"></i>
         </div>
     </div>
     <div class="row-fluid post_header">
