@@ -28,7 +28,7 @@
             ?>
         </div>
         <div class="span1 pull-right">
-            <i class="icon-play-circle toggle_sidebar"></i>
+            <i class="icon-chevron-right toggle_sidebar"></i>
         </div>
     </div>
     <div class="row-fluid post_header">

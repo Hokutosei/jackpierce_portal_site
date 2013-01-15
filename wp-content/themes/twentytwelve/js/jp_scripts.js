@@ -99,15 +99,11 @@ jQuery(function($){
         })
     })
 
-    $('.toggle_sidebar').click(function(){
+    $('.icon-chevron-right').click(function(){
         // TO BE USE LATER ON
-        (function(){
-            var rotation = 0;
-            rotation = 180
-            $('.toggle_sidebar').rotate(rotation);
-        })
         $('.this_main_sidebar').slideToggle("slow", function(){
             $('.index_content').css('width', '95%');
+            $('.toggle_sidebar').removeClass('icon-chevron-right').addClass('icon-chevron-left')
         });
     })
 });
