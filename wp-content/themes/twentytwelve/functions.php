@@ -152,6 +152,8 @@ function twentytwelve_scripts_styles() {
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '20121217', 'all');
     wp_enqueue_script('jp_scripts', get_template_directory_uri() . '/js/jp_scripts.js', array(),
                         '20121217', 'all');
+    wp_enqueue_script('jQueryRotateCompressed.2.2', get_template_directory_uri() . '/js/jQueryRotateCompressed.2.2.js',
+    array(), 2013115, 'all');
 	/*
 	 * Loads the Internet Explorer specific stylesheet.
 	 */

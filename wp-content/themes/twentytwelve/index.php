@@ -59,20 +59,6 @@ get_header(); ?>
 
             </div>
             <br class="clearfloat"/>
-
-            <div class="box_1">
-                <div class="gallery_wrapper">
-                    <div class="jp_post_list">
-                        <div class="cat_title">売れ筋ランキング</div>
-                        <?php if (function_exists('get_highest_rated')): ?>
-                            <ul>
-                                <?php get_highest_rated(); ?>
-                            </ul>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="pull-left this_main_sidebar">
                 <?php get_sidebar(); ?>

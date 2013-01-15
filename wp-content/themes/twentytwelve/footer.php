@@ -10,12 +10,15 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-                </div>
             </div><?php // end of main_content?>
+            <div class="main_footer">
+                ©jp development portal site 2013
+            </div>
+
         </div> <?php // end of jp wrapper?>
+
     </div> <?php // end of container-fluid?>
 </div>
-
 <?php wp_footer(); // this call all the javascripts dont delete! ?>
 </body>
 </html>
