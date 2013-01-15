@@ -97,22 +97,19 @@ jQuery(function($){
                 mc.css('top', -1 * x - 40);
             }
         })
-    })
+    });
     $('.toggle_sidebar').click(function(){
         var t = $(this), p = $('.this_main_sidebar'), i = $('.index_content');
         if(t.hasClass('active_tog')) {
             p.hide();
-            t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left')
+            t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left');
             i.removeClass('span8').css("width", "95%");
         } else {
             p.show();
-            t.removeClass('icon-chevron-left').addClass('active_tog icon-chevron-right')
+            t.removeClass('icon-chevron-left').addClass('active_tog icon-chevron-right');
             i.addClass('span8').css("width", "")
         }
-
-    })
-
-
+    });
 });
 
 
