@@ -98,17 +98,26 @@ jQuery(function($){
         })
     });
     $('.toggle_sidebar').click(function(){
-        var t = $(this), p = $('.this_main_sidebar'), i = $('.index_content');
-        if(t.hasClass('active_tog')) {
-            p.hide();
-            t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left');
-            i.removeClass('span8').css("width", "95%");
+        var t = $(this), p = $('.this_main_sidebar'), i = $('.index_content'),
+            speed = 450, at = 'active_tog';
+        if(t.hasClass('active_tog')){
+            i.animate({left: '-=20px'}, 300, function(){
+                p.animate({height: "toggle"}, speed, function(){
+                    i.animate({left: '+=20', width: '95%'}, speed)
+                    t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left');
+                    i.removeClass('span8');
+                })
+            })
         } else {
-            p.show();
-            t.removeClass('icon-chevron-left').addClass('active_tog icon-chevron-right');
-            i.addClass('span8').css("width", "")
+            i.addClass('span8').animate({left: '+=25px'}, 300)
+                .animate({left:'-=25px',width: '66%'}, speed, function(){
+                p.animate({height: "toggle"}, speed)
+                t.removeClass('.icon-chevron-left').addClass('active_tog icon-chevron-right')
+            })
         }
-    });
+    })
+
+
 
     $('li.comment').append('<br class="clearfloat" />');
 });
