@@ -17,24 +17,22 @@ jQuery(function($){
     });
 
     $(window).ready(function() {
-        removeLeftCol();
+        $(function removeLeftCol() {
+            $('.jp_left_col, .center_nav_col, .main_content').css('min-height', $('.jp_wrapper').height());
+        });
     });
     $(window).resize(function(){
-        removeMidBanner();
+        $(function removeMidBanner() {
+            var w = $(window).width(), m = $('.mid_banner'), ma = $('.main_sidebar'), i = $('.index_content');
+            if(w < 1000) {
+                m.hide(), ma.hide(), i.removeClass('span8').addClass('span7');
+            } else {
+                m.show(), ma.show(), i.removeClass('span7').addClass('span8');
+            }
+        });
     });
-    function removeLeftCol() {
-        $('.jp_left_col, .center_nav_col, .main_content').css('min-height', $('.jp_wrapper').height());
-    }
     $('span.lcp_date').addClass("span2 pull-right");
-    //$('.news_wrapper').find('strong');
-    function removeMidBanner() {
-        var w = $(window).width(), m = $('.mid_banner'), ma = $('.main_sidebar'), i = $('.index_content');
-        if(w < 1000) {
-            m.hide(), ma.hide(), i.removeClass('span8').addClass('span7');
-        } else {
-            m.show(), ma.show(), i.removeClass('span7').addClass('span8');
-        }
-    }
+
 
 /*
 *
