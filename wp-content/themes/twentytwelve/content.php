@@ -27,7 +27,7 @@
             }
             ?>
         </div>
-        <div class="span1 pull-right">
+        <div class="pull-right">
             <i class="icon-chevron-right toggle_sidebar"></i>
         </div>
     </div>
