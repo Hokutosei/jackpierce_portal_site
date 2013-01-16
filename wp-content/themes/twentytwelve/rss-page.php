@@ -28,8 +28,6 @@
 
             // Get a SimplePie feed object from the specified feed source.
             $site_url = get_site_url();
-            $s = '?feed=rss2';
-            $fe = urlencode($s);
             $rss = fetch_feed("http://jpdevelopment.herokuapp.com/?feed=rss2");
             if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
                 // Figure out how many total items there are, but limit it to 5.
@@ -37,6 +35,7 @@
                 // Build an array of all the items, starting with element 0 (first element).
                 $rss_items = $rss->get_items(0, $maxitems);
             endif;
+        echo count($rss_items);
         ?>
         <ul class="rss_post">
             <?php
