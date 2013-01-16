@@ -85,7 +85,7 @@ jQuery(function($){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
         //$ SIGN TO DISABLE/INABLE
         $(window).scroll(function(){
-            var windowTop = $(window).scrollTop
+            var windowTop = $(window).scrollTop()
             var ts = {width: '100%', margin: 0},
                 ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
