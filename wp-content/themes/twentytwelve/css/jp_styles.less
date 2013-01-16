@@ -1,42 +1,4 @@
-@border:#f0f0f0;
-
-@left_nav_bg:#8b8b8b;
-@center_nav_col_bg: #ececec;
-
-@margin_top: 50px;
-@padding_top_content:35px;
-
-/* COLOR SHCEME 1 */
-@grey_01:#606060;
-@mid_grey_font_1:#666666;
-@light_grey:#EEEEEE;
-@light_grey_font_1:#DCDCDC;
-
-@light_blue:#0099cc;
-@light_blue_2:#acd1e9;
-
-/* CATEGORY ITEM STYLING */
-@cat_item_color:#d3d3d3;
-@cat_item_font_color:#86A7AC;
-@cat_border_left:#6599FF;
-@cat_border_left_alt:#FF9900;
-@cat_border_left_alt2:#DF7782;
-@this_title_a_color:#336699;
-@cit_cont_bcolor:#f1f1f1;
-
-/* TOP BANNER STYLING */
-@top_banner_color:#fff;
-/*@top_banner_bg: url("images/banner_images/top_header_08.png"); */
-@top_banner_bg: #f5f4f0;
-
-/* MAIN CONTENT POSITIONING*/
-@main_content_pos:-15px;
-
-/* CONTAINER BACKGROUND */
-@container_bg:url("images/banner_images/container_bg_03.png") no-repeat;
-
-/* DASHED BORDER COLOR INDEX NEWS LIST */
-@news_border_color:#e7e7e7;
+@import url("jp_vars.less");
 
 /* MIXINS */
 .border_radius(@radius) {
@@ -239,16 +201,19 @@ ul.lcp_catlist {
 }
 
 .cat_title {
+/*   background: url("images/low_contrast_linen.png");
+*/
   height: 29px;
   vertical-align: middle;
   padding-top: 6px;
   font-size: 20px;
-  background: url("images/low_contrast_linen.png");
   padding-left: 5px;
-  color: #fff;
+  color: @grey9b;
   font-weight: 100;
   margin: 5px;
-  .bottom;
+  &:hover {
+    color: @grey6f;
+  }
 }
 
 .cat_title_border_left {
@@ -321,8 +286,9 @@ ul.lcp_catlist {
   float: left;
   width: 255px;
   .main_sidebar {
+/*    background: url("images/low_contrast_linen.png");
+*/
     padding: 3px;
-    background: url("images/low_contrast_linen.png");
     border: 1px solid #d3d3d3;
     margin-bottom:10px;
     .border_radius(5px);
@@ -347,10 +313,10 @@ ul.lcp_catlist {
       list-style-type: disc;
       li {
         a {
-          font-size: 10px;
-          color: #fff;
+          font-size: 12px;
+          color: @greyb1;
           &:hover {
-            color: #6dcff6;
+            color: @grey6f;
           }
         }
       }
@@ -741,7 +707,6 @@ ul.hall_of_fame {
 
 /* ARCHIVE TITLE FIX */
 .archive-header {
-  border-bottom: 1px solid @light_grey;
   margin-bottom:10px;
   margin-top:0px;
   padding-bottom: 10px;

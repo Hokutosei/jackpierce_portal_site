@@ -19,7 +19,7 @@ get_header(); ?>
         <div class="span8 pull-left index_content">
             <div class="box_1">
                 <?php
-                echo do_shortcode(
+                    echo do_shortcode(
                     "[catlist name=news catlink=yes date=no date_tag=span comments=no
                     date_class=lcp_date numberposts=10 class=lcp_catlist morelink=\"もっと見る\"
                     morelink_class=morelink_class]
