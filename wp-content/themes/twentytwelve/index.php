@@ -15,9 +15,7 @@
  */
 
 get_header(); ?>
-
-
-    <div class="news_wrapper">
+    <div class="news_wrapper index_trigger">
         <div class="span8 pull-left index_content">
             <div class="box_1">
                 <?php

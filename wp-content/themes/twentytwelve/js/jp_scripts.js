@@ -1,4 +1,13 @@
 jQuery(function($){
+    $(window).ready(function(){
+        if($('.news_wrapper').hasClass('index_trigger')){
+            $('.top_banner').css({opacity:0}).animate({opacity: 1}, 3000)
+            $('.main_content').css({top: 300, opacity: 0.50}).animate({top: 0, opacity: 1}, 1000)
+        }
+
+    })
+
+
     $('.entry-title').addClass('entry_title_bg');
 
     $('.this_article').addClass('my_article');
@@ -89,9 +98,9 @@ jQuery(function($){
             var ts = {width: '100%', margin: 0},
                 ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
-                this_div.addClass('navbar-fixed-top').css(ts);
+                this_div.addClass('navbar-fixed-top main_nav_shadow').css(ts);
             } else {
-                this_div.removeClass('navbar-fixed-top').css(ds);
+                this_div.removeClass('navbar-fixed-top main_nav_shadow').css(ds);
             }
         })
     });
