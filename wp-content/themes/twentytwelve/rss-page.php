@@ -22,13 +22,12 @@
             $site_url = get_site_url();
             $rss = fetch_feed("http://localhost:8888/wordpress/?feed=rss");
             $jp_rss2 = fetch_feed("http://www.facebook.com/feeds/page.php?format=atom10&id=201834806505882");
-            echo $rss;
             if (!is_wp_error( $rss ) ) :
                 $maxitems = $jp_rss2->get_item_quantity(10);
                 $rss_items = $jp_rss2->get_items(0, $maxitems);
-                //https://www.facebook.com/photo.php?fbid=292676944088334&set=a.201836216505741.44392.201834806505882&type=1
+                //FB RSS CODE 201834806505882
             endif;
-        echo count($rss_items);
+            //echo count($rss_items);
         ?>
         <ul class="rss_post">
             <?php
