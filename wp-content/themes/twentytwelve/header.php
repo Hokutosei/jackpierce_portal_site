@@ -40,6 +40,11 @@
 
                 <div class="">
                     <div class="">
+                        <div class="top_banner">
+                            <div class="row">
+                                <div class="span7 top_left_banner"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="main_content">

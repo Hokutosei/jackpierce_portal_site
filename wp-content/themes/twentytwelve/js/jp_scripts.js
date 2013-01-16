@@ -73,7 +73,7 @@ jQuery(function($){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
         //$ SIGN TO DISABLE/INABLE
         $(window).scroll(function(){
-            var windowTop = $(window).scrollTop();
+            var windowTop = $(window).scrollTop
             var ts = {width: '100%', margin: 0},
                 ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
@@ -88,15 +88,16 @@ jQuery(function($){
         var mc = $('.main_content');
         //mc.css('top', -90);
         (window).scroll(function(){
-            var x = parseInt($(document).scrollTop());
+            var x = parseInt($(document).scrollTop);
             var y = $('.main_content').position().top;
             $('.scrollamount').html($(document).scrollTop());
             $('.mc_pos').html(y);
             if(x >= 0 ) {
-                mc.css('top', -1 * x - 40);
+            //    mc.css('top', -1 * x - 40);
             }
         })
     });
+    // INDEX CONTENT TOGGLE ANIMATION
     $('.toggle_sidebar').click(function(){
         var t = $(this), p = $('.this_main_sidebar'), i = $('.index_content'),
             speed = 450, at = 'active_tog';
@@ -109,8 +110,8 @@ jQuery(function($){
                 })
             })
         } else {
-            i.addClass('span8').animate({left: '+=25px'}, 300)
-                .animate({left:'-=25px',width: '66%'}, speed, function(){
+            i.addClass('span8').animate({left: '+=23px'}, 300)
+                .animate({left:'-=23px',width: '66%'}, speed, function(){
                 p.animate({height: "toggle"}, speed)
                 t.removeClass('.icon-chevron-left').addClass('active_tog icon-chevron-right')
             })

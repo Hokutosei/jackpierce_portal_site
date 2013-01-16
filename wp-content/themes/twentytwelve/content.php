@@ -23,7 +23,6 @@
                         .'</button>';
                 }
                 echo trim($output);
-                //echo $output;
             }
             ?>
         </div>
@@ -62,7 +61,6 @@
 
         </div>
     </article><!-- #post -->
-
 </div>
 
 
