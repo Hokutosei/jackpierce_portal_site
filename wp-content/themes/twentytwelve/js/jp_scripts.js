@@ -1,13 +1,12 @@
 jQuery(function($){
+    $('.main_content').css({top: -5});
+
     $(window).ready(function(){
         if($('.news_wrapper').hasClass('index_trigger')){
-            $('.top_banner').css({opacity:0}).animate({opacity: 1}, 3000)
-            $('.main_content').css({top: 300, opacity: 0.50}).animate({top: 0, opacity: 1}, 1000)
+            $('.top_banner').css({opacity:0}).animate({opacity: 1}, 3000);
+            $('.main_content').css({top: 100, opacity: 0.0}).animate({top: -20, opacity: 1}, 1500).animate({top: '+=15'}, 300);
         }
-
-    })
-
-
+    });
     $('.entry-title').addClass('entry_title_bg');
 
     $('.this_article').addClass('my_article');
