@@ -4,8 +4,6 @@
     */
     get_header();
 ?>
-
-
 <div class="news_wrapper">
     <div class="span8 pull-left index_content rss_post_list">
         <div class="row post_cat_id">
