@@ -30,7 +30,7 @@
             $site_url = get_site_url();
             $s = '?feed=rss2';
             $fe = urlencode($s);
-            $rss = fetch_feed("$site_url/$fe");
+            $rss = fetch_feed("http://jpdevelopment.herokuapp.com/?feed=rss2");
             if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
                 // Figure out how many total items there are, but limit it to 5.
                 $maxitems = $rss->get_item_quantity(20);
