@@ -430,12 +430,16 @@ h3.widget-title {
     }
   }
 }
-.toggle_sidebar {
-  vertical-align: middle;
-  margin-right: 5px;
-  cursor: pointer;
-}
+.toggle_bar {
+  margin-bottom:2px;
+  height:20px;
+  .toggle_sidebar {
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+  }
 
+}
 
 
 /* POST BODY STYLING FOR CONTENT PAGE */
@@ -711,5 +715,47 @@ ul.hall_of_fame {
     margin-top: 10px;
     left: 0px !important;
     list-style-type: disc;
+    li.rss_post_item {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* ICONS */
+/* ICON MIXIN */
+.icon_mixin {
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-top: 6px !important;
+  margin: -5px -100px 0px 0;
+  margin-left: -0.5% !important;
+}
+.jp_circle_remove {
+  .icon_mixin;
+  background: url("glyphicons2/png/glyphicons_192_circle_remove.png") no-repeat;
+}
+
+/* ARCHIVE TITLE FIX */
+.archive-header {
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom:10px;
+  margin-top:0px;
+  padding-bottom: 10px;
+  width:100%;
+  .archive-title {
+    margin: 0px;
+    width: 50%;
+    line-height: 14px;
+    font-size:15px;
+    span {
+      border-bottom: 3px solid #90ee90;
+    }
+    &:hover {
+      span {
+        border-bottom: 3px solid #ff0000;
+      }
+    }
   }
 }

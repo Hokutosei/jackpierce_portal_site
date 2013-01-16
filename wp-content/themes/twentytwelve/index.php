@@ -66,5 +66,3 @@ get_header(); ?>
     </div>
     <?php get_footer(); ?>
 
-<?php include_once(ABSPATH . WPINC . '/rss.php');
-wp_rss('http://localhost:8888/wordpress/?feed=rss', 10); ?>

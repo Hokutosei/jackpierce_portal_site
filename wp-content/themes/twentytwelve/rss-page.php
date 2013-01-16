@@ -7,31 +7,24 @@
 <div class="news_wrapper">
     <div class="span8 pull-left index_content rss_post_list">
         <div class="row post_cat_id">
-            <div class="pull-right">
-                <div class="pull-right">
-                    <i class="icon-chevron-right toggle_sidebar active_tog"></i>
-                </div>
-            </div>
         </div>
 
         <div class="row-fluid post_header">
             <div class="jp_article_content_head span12">
                 <blockquote class="jp_content_title">
-                    <h4> <?php _e('[ JackPierce ] Station RSS など一覧'); ?> </h4>
+                    <h4> <?php _e('[ JackPierce ] Station Facebook RSS など一覧'); ?> </h4>
                 </blockquote>
             </div>
         </div>
         <?php // Get RSS Feed(s)
             include_once(ABSPATH . WPINC . '/feed.php');
-
             // Get a SimplePie feed object from the specified feed source.
             $site_url = get_site_url();
-            $rss = fetch_feed("http://jpdevelopment.herokuapp.com/?feed=rss2");
+            $rss = fetch_feed("http://localhost:8888/wordpress/?feed=rss");
             $jp_rss2 = fetch_feed("http://www.facebook.com/feeds/page.php?format=atom10&id=201834806505882");
-            if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
-                // Figure out how many total items there are, but limit it to 5.
-                $maxitems = $jp_rss2->get_item_quantity(20);
-                // Build an array of all the items, starting with element 0 (first element).
+            echo $rss;
+            if (!is_wp_error( $rss ) ) :
+                $maxitems = $jp_rss2->get_item_quantity(10);
                 $rss_items = $jp_rss2->get_items(0, $maxitems);
                 //https://www.facebook.com/photo.php?fbid=292676944088334&set=a.201836216505741.44392.201834806505882&type=1
             endif;
@@ -41,11 +34,10 @@
             <?php
                 if ($maxitems == 0) echo '<li>No items.</li>';
                 else
-                // Loop through each feed item and display each item as a hyperlink.
                 foreach ( $rss_items as $item ) : ?>
                     <li class="rss_post_item">
                         <a href='<?php echo esc_url( $item->get_permalink() ); ?>'
-                           title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>'>
+                           title='<?php echo 'Posted '.$item->get_date('j F Y | g:i a'); ?>' class="rss_item_link">
                             <?php echo esc_html( $item->get_title() ); ?></a>
                     </li>
             <?php endforeach; ?>

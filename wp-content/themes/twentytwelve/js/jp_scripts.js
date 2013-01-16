@@ -59,7 +59,8 @@ jQuery(function($){
     // trim long title from the index gallery page, REUSABLE FUNCTION
     // JUST ADD THE ELEMENT TO THE ARRAY
     $(function(){
-        var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title'), ms = $('.main_sidebar_links');
+        var l = 25, c = $('.gallery_wrapper > ul.jp_post_list > li > a.this_title'), ms = $('.main_sidebar_links'),
+            rss_fb =$('a.rss_item_link');
         $.each([c, ms], function(a, b){
             b.each(function(){
                 if($(this).html().length > l) {
@@ -69,6 +70,17 @@ jQuery(function($){
         })
     });
 
+    // TRIM FACEBOOK RSS FEED
+    $(function(){
+        var i = $('a.rss_item_link');
+        //alert(i.length);
+        i.each(function(){
+            //alert($(this).html())
+            if($(this).html().length > 100) {
+                $(this).html($(this).html().substring(0, 85) + " ...");
+            }
+        })
+    });
     $(function(){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
         //$ SIGN TO DISABLE/INABLE
@@ -105,7 +117,8 @@ jQuery(function($){
             i.animate({left: '-=20px'}, 300, function(){
                 p.animate({height: "toggle"}, speed, function(){
                     i.animate({left: '+=20', width: '95%'}, speed)
-                    t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left');
+                    //TO FIX THIS REMOVE CLASS THAT CHANGE WHEN ANIMATION IS FINISH
+                    t.removeClass('active_tog icon-circle-remove').addClass('icon-chevron-left');
                     i.removeClass('span8');
                 })
             })

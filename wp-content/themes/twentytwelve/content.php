@@ -26,9 +26,9 @@
             }
             ?>
         </div>
-        <div class="pull-right">
+       <!-- <div class="pull-right">
             <i class="icon-chevron-right toggle_sidebar active_tog"></i>
-        </div>
+        </div> -->
     </div>
     <div class="row-fluid post_header">
         <div class="jp_article_content_head span12">
