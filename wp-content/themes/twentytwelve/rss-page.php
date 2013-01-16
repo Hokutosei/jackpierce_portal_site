@@ -27,11 +27,13 @@
             // Get a SimplePie feed object from the specified feed source.
             $site_url = get_site_url();
             $rss = fetch_feed("http://jpdevelopment.herokuapp.com/?feed=rss2");
+            $jp_rss2 = fetch_feed("http://www.facebook.com/feeds/page.php?format=atom10&id=201834806505882");
             if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly
                 // Figure out how many total items there are, but limit it to 5.
-                $maxitems = $rss->get_item_quantity(20);
+                $maxitems = $jp_rss2->get_item_quantity(20);
                 // Build an array of all the items, starting with element 0 (first element).
-                $rss_items = $rss->get_items(0, $maxitems);
+                $rss_items = $jp_rss2->get_items(0, $maxitems);
+                //https://www.facebook.com/photo.php?fbid=292676944088334&set=a.201836216505741.44392.201834806505882&type=1
             endif;
         echo count($rss_items);
         ?>
