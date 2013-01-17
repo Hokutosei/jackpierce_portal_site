@@ -17,6 +17,9 @@
 get_header(); ?>
     <div class="news_wrapper index_trigger">
         <div class="span8 pull-left index_content">
+            <i class="icon-chevron-right toggle_sidebar active_tog"></i>
+            <br class="clearfloat">
+
             <div class="box_1">
                 <?php
                     echo do_shortcode(

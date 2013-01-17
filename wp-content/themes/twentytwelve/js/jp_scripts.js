@@ -93,7 +93,7 @@ jQuery(function($){
         var this_div = $('.main_nav_bar'), stickyTop = this_div.offset().top;
         //$ SIGN TO DISABLE/INABLE
         $(window).scroll(function(){
-            var windowTop = $(window).scrollTop()
+            var windowTop = $(window).scrollTop();
             var ts = {width: '100%', margin: 0},
                 ds = {width: '95%', margin: '0 auto', 'margin-right': '21px'};
             if (stickyTop < windowTop) {
@@ -124,26 +124,26 @@ jQuery(function($){
         if(t.hasClass('active_tog')){
             i.animate({left: '-=20px'}, 300, function(){
                 p.animate({height: "toggle"}, speed, function(){
-                    i.animate({left: '+=20', width: '95%'}, speed)
+                    i.animate({left: '+=20', width: '95%'}, speed);
                     //TO FIX THIS REMOVE CLASS THAT CHANGE WHEN ANIMATION IS FINISH
-                    t.removeClass('active_tog icon-circle-remove').addClass('icon-chevron-left');
+                    t.removeClass('active_tog icon-chevron-right').addClass('icon-chevron-left');
                     i.removeClass('span8');
                 })
             })
         } else {
             i.addClass('span8').animate({left: '+=23px'}, 300)
                 .animate({left:'-=23px',width: '66%'}, speed, function(){
-                p.animate({height: "toggle"}, speed)
+                p.animate({height: "toggle"}, speed);
                 t.removeClass('.icon-chevron-left').addClass('active_tog icon-chevron-right')
             })
         }
     })
 
+    // POST CAT LISTINGS FROM POST SET OPACITY ON HOVER
     var pci = $('.post_cat_id');
-    //pci.css({opacity: 0.2});
     pci.hover(function(){
         $(this).animate({opacity: 1}, 200)
-    }, function(){$(this).animate({opacity: 0.2}, 400);})
+    }, function(){ $(this).animate({opacity: 0.2}, 400); });
 
     $('li.comment').append('<br class="clearfloat" />');
 

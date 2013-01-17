@@ -7,6 +7,8 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+<i class="icon-chevron-right toggle_sidebar active_tog"></i>
+<br class="clearfloat">
 
 <div class="row-fluid post_cat_list">
     <div class="row post_cat_id">

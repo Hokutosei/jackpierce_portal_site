@@ -76,7 +76,7 @@
                         ?>
                     </div>
                     <div class="row">
-                        <div class="span12 offset11 toggle_bar">
-                            <i class="jp_circle_remove toggle_sidebar active_tog"></i>
-                        </div>
+                       <!-- <div class="span12 offset11 toggle_bar">
+                            <i class="icon-chevron-right toggle_sidebar active_tog"></i>
+                        </div> -->
 

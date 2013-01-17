@@ -11,8 +11,11 @@
  * @since Twenty Twelve 1.0
  */
 get_header(); ?>
-<div class="news_wrapper" xmlns="http://www.w3.org/1999/html">
+<div class="news_wrapper">
     <div class="span8 pull-left index_content">
+        <i class="icon-chevron-right toggle_sidebar active_tog"></i>
+        <br class="clearfloat">
+
         <?php if ( have_posts() ) : ?>
         <header class="archive-header">
             <h1 class="archive-title">
