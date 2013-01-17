@@ -59,6 +59,8 @@ jQuery(function($){
         s.addClass('cat_title_border_left');
         a.addClass('cat_title_border_left_alt').addClass('cat_title_border_left_alt2');
     })();
+    $('.box_1 strong').addClass('box_1_title');
+    $('.cat_title').after('<span class="spacer_bar pull-right"></span>')
 
     $('.jp_random_image').addClass('jp_random_image_style');
 
@@ -81,9 +83,7 @@ jQuery(function($){
     // TRIM FACEBOOK RSS FEED
     $(function(){
         var i = $('a.rss_item_link');
-        //alert(i.length);
         i.each(function(){
-            //alert($(this).html())
             if($(this).html().length > 100) {
                 $(this).html($(this).html().substring(0, 85) + " ...");
             }
@@ -139,9 +139,14 @@ jQuery(function($){
         }
     })
 
-
+    var pci = $('.post_cat_id');
+    //pci.css({opacity: 0.2});
+    pci.hover(function(){
+        $(this).animate({opacity: 1}, 200)
+    }, function(){$(this).animate({opacity: 0.2}, 400);})
 
     $('li.comment').append('<br class="clearfloat" />');
+
 });
 
 

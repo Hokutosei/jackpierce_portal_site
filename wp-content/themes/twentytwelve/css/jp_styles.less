@@ -207,7 +207,7 @@ ul.lcp_catlist {
   vertical-align: middle;
   padding-top: 6px;
   font-size: 20px;
-  padding-left: 5px;
+  padding-left: 10px;
   color: @grey9b;
   font-weight: 100;
   margin: 5px;
@@ -379,6 +379,7 @@ h3.widget-title {
       margin-right: 0 !important;
       border-bottom:1px solid #d3d3d3;
       backgroud:#000;
+      opacity:0.2;
       p.cat_list_p {
         float: left;
         margin: 4px !important;
@@ -436,7 +437,6 @@ div.jp_div_comments{
   padding: 10px;
   margin-top:20px;
   font-size: @comment_fnt_size;
-
   .comments-area {
     padding:0px;
     ol.commentlist {
@@ -491,6 +491,12 @@ div.jp_div_comments{
   }
 }
 
+/* RESPOND BODY STYLING */
+#respond {
+  padding: 10px;
+  border: 1px solid @light_grey;
+  .border_radius(5px);
+}
 
 .inline-link-3 {
   display: inline-block;
@@ -529,6 +535,15 @@ span.comment_count {
 /*border: 1px solid @light_grey;
   .shadow_03(0.65);
 */
+  strong.box_1_title {
+    width:100%;
+    span.spacer_bar {
+      max-height: 1px;
+      margin-top: -25px;
+      border-bottom: 1px solid @light_grey;
+    }
+  }
+
 }
 .box_2_bordered {
   border: 1px solid #d3d3d3;
@@ -568,6 +583,7 @@ ul.jp_post_list {
   color: @cat_item_font_color;
   font-size: 13px;
   width:100%;
+  .shadow_03(0.73);
   a {
     color: @cat_item_font_color;
   }
@@ -577,6 +593,7 @@ ul.jp_post_list {
 *   CLASS AS OF THE CATEGORY PAGE AND CATEGORY CONTENT
     border: 1px solid #d3d3d3;
 */
+    border:1px solid @greyb1;
     .attachment-post-thumbnail{
       border: 2px solid @light_blue;
     }
