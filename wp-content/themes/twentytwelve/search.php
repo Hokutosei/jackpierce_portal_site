@@ -8,25 +8,24 @@
  */
 
 get_header(); ?>
-
     <div class="news_wrapper">
         <div class="span8 pull-left index_content">
+            <i class="icon-chevron-right toggle_sidebar active_tog"></i>
+            <br class="clearfloat">
 
             <?php if ( have_posts() ) : ?>
 
-            <header class="page-header">
-                <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-            </header>
-
-                <?php twentytwelve_content_nav( 'nav-above' ); ?>
-
+                <header class="archive-header">
+                    <h1 class="archive-title">
+                        <span>
+                            <?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?>
+                        </span>
+                    </h1>
+                </header><!-- .archive-header -->
                 <?php /* Start the Loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_part( 'content', get_post_format() ); ?>
-                <?php endwhile; ?>
-
-            <?php twentytwelve_content_nav( 'nav-below' ); ?>
-
+                    <?php while ( have_posts() ) : the_post(); ?>
+                        <?php get_template_part( 'content', 'page'); ?>
+                    <?php endwhile; ?>
             <?php else : ?>
 
                 <header class="entry-header">
@@ -39,7 +38,7 @@ get_header(); ?>
             <?php endif; ?>
 
         </div>
-        <div class="span3 pull-left main_sidebar">
+        <div class="span3 pull-left this_main_sidebar">
             <?php get_sidebar(); ?>
         </div>
 
